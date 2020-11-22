@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useContext } from 'react';
 import { useRef } from 'react';
 import { useEffect } from 'react';
@@ -46,24 +45,23 @@ function Topbar({ baseURL }) {
                   alt='Swagger UI'
                 />
               </a>
-              <Link href={fullURL}>
-                <form
-                  className='download-url-wrapper'
-                  onSubmit={() => alert('x')}>
-                  <input
-                    ref={schemaURLInput}
-                    type='text'
-                    className='download-url-input'
-                    onKeyPress={onAddressBarKeypress}
-                    defaultValue={url}
-                  />
-                  <button
-                    onClick={onButtonExploreClick}
-                    className='download-url-button button'>
-                    Explore
-                  </button>
-                </form>
-              </Link>
+
+              <form
+                className='download-url-wrapper'
+                onSubmit={(e) => e.preventDefault()}>
+                <input
+                  ref={schemaURLInput}
+                  type='text'
+                  className='download-url-input'
+                  onKeyPress={onAddressBarKeypress}
+                  defaultValue={url}
+                />
+                <button
+                  onClick={onButtonExploreClick}
+                  className='download-url-button button'>
+                  Explore
+                </button>
+              </form>
             </div>
           </div>
         </div>
