@@ -9,7 +9,8 @@ export async function getServerSideProps(context) {
   const enableHTTPS = process.env.ENABLE_HTTPS !== 'false';
   const protocol = enableHTTPS ? 'https' : 'http';
   const baseURL = protocol + '://' + host + '/?url=';
-  const initialURL = context.query.url || '';
+  const initialURL =
+    context.query.url || 'https://petstore.swagger.io/v2/swagger.json';
   return {
     props: { baseURL, initialURL },
   };
