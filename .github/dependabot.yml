@@ -1,0 +1,19 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "22:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: swagger-ui-react
+    versions:
+    - 3.38.0
+    - 3.41.1
+    - 3.44.0
+  - dependency-name: next
+    versions:
+    - 10.0.4
+    - 10.0.6
+    - 10.0.7
