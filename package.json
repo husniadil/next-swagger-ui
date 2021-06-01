@@ -11,6 +11,6 @@
     "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "swagger-ui-react": "^3.37.0"
+    "swagger-ui-react": "^3.49.0"
   }
 }
